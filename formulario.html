@@ -10,7 +10,13 @@
 </head>
 
 <body>
+    <div class="descuento">
+        20% de descuento en todos los productos!
+    </div>
+
     <header>
+
+        <img src="./img/Logo.png" alt="">
         <h1> Nombre Tienda </h1>
     </header>
     <section class="section-menu">
@@ -19,67 +25,79 @@
                 <li>Contacto</li>
                 <li>Registrarme</li>
                 <li>Ingresar</li>
-
             </ul>
         </div>
     </section>
 
+
     <div class="container">
-        <form action="formulario.html" method="POST"></form>
-        <div class="box-1">
-            <p>
-                <!-- campo para el nombre -->
-                <label for="nombre">*Nombre: </label>
-                <input type="text" id="nombre" name="nombre">
-            </p>
-            <p>
-                <!-- campo para fecha -->
-                <label for="fecha">Fecha</label>
-                <input type="date" name="fecha" id="fecha" value="2023-03-18" min="2023-03-15">
-            </p>
-            <!-- textarea -->
-            <label for="comentarios"></label>
-            <textarea name="descripcion" id="descripcion" cols="20" rows="5" placeholder="Descripción" required
-                minlength="10" maxlength="100"></textarea>
+        <h1>Añadí tu super!</h1>
+        <p>Agregá tu personaje favorito completando las opciones.</p>
+
+        <div class="box1">
+            <form action="formulario.html" method="POST">
+                <p>
+                    <label for="nombre">*Nombre: </label>
+                    <input type="text" id="nombre" name="nombre">
+                </p>
+                <p>
+                    <!-- campo para fecha -->
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" id="fecha" value="2023-03-18" min="2023-03-15">
+                </p>
+                <!-- textarea -->
+                <label for="descripcion"></label>
+                <textarea name="descripcion" id="descripcion" cols="20" rows="10" placeholder="Descripción" required
+                    minlength="10" maxlength="100">
+                </textarea>
+
+
+                <div class="box2">
+                    <!-- select -->
+                    <label for="especie">Especie
+                        <select name="especie" id="especie">
+                            <optgroup label="Especie">
+                                <option value="Jupiteriano">Jupiteriano</option>
+                                <option value="Androide">Androide</option>
+                                <option value="Humano">Humano</option>
+                                <option value="otro">Otro</option>
+                            </optgroup>
+                        </select>
+                    </label>
+
+                    <p class="column">Agregar Foto
+                        <input type="file" name="imagen" id="imagen" accept=".jpeg, .png, .pdf" multiple />
+
+                    </p>
+                    <p class="column">Seleccione los poderes
+                        <label for="Volar" class="column">
+                            <input type="checkbox" name="volar" id="volar" value="volar" />Volar</label>
+                        <label for="Superinteligencia" class="column">
+                            <input type="checkbox" name="Superinteligencia" id="Superinteligencia"
+                                value="Superinteligencia" />Superinteligencia</label>
+                        <label for="Vista de rayo láser" class="column">
+                            <input type="checkbox" name="rayo" id="rayo" value="rayo" />Vista de rayo láser</label>
+                    </p>
+                    <hr>
+
+
+                    <label class="column"> Tipos de Personajes
+                        <input type="radio" name="personaje" id="Héroe/Heroina" value="Héroe/Heroina" /><label
+                            for="Héroe/Heroina">Héroe/Heroina</label>
+                        <input type="radio" name="personaje" id="Villano/Villana" value="Villano/Villana" /><label
+                            for="Villano/Villana">Héroe/Heroina</label>
+                    </label>
+                    <input class="boton-añadir" type="submit" value="Añadir" />
+                </div>
+
+            </form>
         </div>
-
-        <div class="box-2">
-            <!-- select -->
-            <label for="especie">Especie
-                <select name="especie" id="especie">
-                    <optgroup label="Especie">
-                        <option value="Jupiteriano">Jupiteriano</option>
-                        <option value="Androide">Androide</option>
-                        <option value="Humano">Humano</option>
-                        <option value="otro">Otro</option>
-                    </optgroup>
-            </label>
-            
-
-            <!-- input file Imagen documento -->
-            <label for="imagen">Imagen Documento
-                <input type="file" name="imagen" id="imagen" accept=".jpeg, .png, .pdf" multiple />
-                </label>
-
-
-
-            <fieldset>
-                <legend>Poderes</legend>
-                <p>Seleccione los poderes</p>
-                <label for="Volar">
-                    <input type="checkbox" name="volar" id="volar" value="volar" />Volar</label>
-                <label for="Superinteligencia">
-                    <input type="checkbox" name="Superinteligencia" id="Superinteligencia"
-                        value="Superinteligencia" />Superinteligencia</label>
-                <label for="Vista de rayo láser">
-                    <input type="checkbox" name="rayo" id="rayo" value="rayo" />Vista de rayo láser</label>
-        </div>
-        </form>
     </div>
-    <footer>
-        <p>Todos los derechos reservados a FRONT END 1</p>
-
-    </footer>
 </body>
+<footer>
+    <p>
+        Todos los derechos reservados a FRONT END 1
+    </p>
+</footer>
 
 </html>
